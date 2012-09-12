@@ -1,4 +1,7 @@
-*.log
-*.pot
 *.pyc
+*.sw[a-z]
+*.DS_Store
+*.mo
+*.sqlite3
+.idea
 local_settings.py
