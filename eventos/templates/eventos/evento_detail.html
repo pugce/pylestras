@@ -1,11 +1,17 @@
-{{ evento.titulo }}
-{{ evento.local }}
-{{ evento.data_realizacao|date:"d/m/Y" }}
+{% extends "base.html" %}
 
-{% for palestra in palestras %}
-    {{ palestra.titulo }}
-    {{ palestra.descricao }}
-    {% for palestrante in palestra.palestrantes.all %}
-        {{ palestrante.nome }}
+{% block content %}
+
+    {{ evento.titulo }}
+    {{ evento.local }}
+    {{ evento.data_realizacao|date:"d/m/Y" }}
+
+    {% for palestra in palestras %}
+        {{ palestra.titulo }}
+        {{ palestra.descricao }}
+        {% for palestrante in palestra.palestrantes.all %}
+            {{ palestrante.nome }}
+        {% endfor %}
     {% endfor %}
-{% endfor %}
+
+{% endblock %}
