@@ -1,6 +1,8 @@
 # Django settings for pylestras project.
+import os
 import dj_database_url
 
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -11,14 +13,14 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost')
+    'default': dj_database_url.config(default='sqlite:///%s/dev.sqlite3' % PROJECT_DIR)
 }
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Fortaleza'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
