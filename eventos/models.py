@@ -21,6 +21,12 @@ CHOICES_TIPO_PATROCINIO = (
     (PA_OUTRO, 'outro'),
 )
 
+class PublicoManager(models.Manager):
+    def get_query_set(self):
+        query_set = super(PublicoManager, self).get_query_set()
+        query_set = query_set.filter(publicado=True)
+        return query_set
+
 
 class Evento(models.Model):
     publicado = models.BooleanField(default=False)
@@ -33,6 +39,9 @@ class Evento(models.Model):
         help_text='Em reais (R$)')
     data_limite_inscricao = models.DateField(blank=True, null=True)
     limite_inscricoes = models.PositiveIntegerField('Limite de inscrições', blank=True, null=True)
+
+    objects = models.Manager()
+    publicados = PublicoManager()
 
     class Meta:
         get_latest_by = 'data_realizacao'

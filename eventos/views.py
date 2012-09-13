@@ -1,4 +1,5 @@
 from django.views.generic import DetailView
+from django.http import Http404
 
 from eventos.models import Evento, Palestra
 
@@ -14,6 +15,9 @@ class EventoView(DetailView):
 class EventoAtualView(EventoView):
 
     def get_object(self, queryset=None):
-        evento = Evento.objects.latest()
+        try:
+            evento = Evento.publicados.latest()
+        except Evento.DoesNotExist:
+            raise Http404
         self.kwargs['slug'] = evento.slug
         return evento
