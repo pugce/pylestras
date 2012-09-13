@@ -34,6 +34,10 @@ class Evento(models.Model):
     data_limite_inscricao = models.DateField(blank=True, null=True)
     limite_inscricoes = models.PositiveIntegerField('Limite de inscrições', blank=True, null=True)
 
+    class Meta:
+        get_latest_by = 'data_realizacao'
+        ordering = ['-data_realizacao']
+
     def __unicode__(self):
         return self.titulo
 
@@ -84,7 +88,7 @@ class Patrocinio(models.Model):
     tipo = models.IntegerField(choices=CHOICES_TIPO_PATROCINIO)
     valor = models.DecimalField(default=0, max_digits=8, decimal_places=2,
         help_text='Em reais (R$)')
-    descricao = models.TextField('Descrição', 
+    descricao = models.TextField('Descrição',
         help_text='Caso não seja financeiro', blank=True, null=True)
     contato = models.CharField(max_length=100)
     email = models.EmailField(blank=True, null=True)
