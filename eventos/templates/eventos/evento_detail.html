@@ -2,16 +2,24 @@
 
 {% block content %}
 
-    {{ evento.titulo }}
-    {{ evento.local }}
-    {{ evento.data_realizacao|date:"d/m/Y" }}
+    <h2>{{ evento.titulo }}</h2>
+    <p><strong>Local:</strong> {{ evento.local }}</p>
+    <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
 
-    {% for palestra in palestras %}
-        {{ palestra.titulo }}
-        {{ palestra.descricao }}
-        {% for palestrante in palestra.palestrantes.all %}
-            {{ palestrante.nome }}
-        {% endfor %}
-    {% endfor %}
+    {% if palestras %}
+        <ul class='palestras'>
+            {% for palestra in palestras %}
+            <li class='palestra'>
+                <h4>{{ palestra.titulo }}</h4>
+                <p>{{ palestra.descricao }}</p>
+                <ul class='palestrantes'>
+                    {% for palestrante in palestra.palestrantes.all %}
+                        <li class='palestrante'>{{ palestrante.nome }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
 {% endblock %}
