@@ -75,7 +75,7 @@ class Inscricao(models.Model):
     codigo = models.CharField(max_length=12)
 
     def __unicode__(self):
-        return 'Inscrição %05d' % self.id
+        return u'Inscrição %05d' % self.id
 
 
 class Palestra(models.Model):
@@ -90,7 +90,7 @@ class Realizacao(models.Model):
     profile = models.ForeignKey(Profile)
 
     def __unicode__(self):
-        return self.profile
+        return u'%s' % self.profile
 
 
 class Patrocinio(models.Model):
@@ -108,4 +108,4 @@ class Patrocinio(models.Model):
     texto = models.TextField(help_text='Caso solicitado', blank=True, null=True)
 
     def __unicode__(self):
-        return self.nome or self.contato
+        return u'%s' % (self.nome or self.contato)
