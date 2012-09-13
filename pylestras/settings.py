@@ -44,15 +44,16 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')
 
+DEFAULT_FILE_STORAGE = 'pylestras.s3utils.MediaRootS3BotoStorage'
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = 'https://%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
 
+STATICFILES_STORAGE = 'pylestras.s3utils.StaticRootS3BotoStorage'
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-STATIC_URL = 'https://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = 'https://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static_files'),
 )
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
