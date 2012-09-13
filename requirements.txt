@@ -3,3 +3,4 @@ distribute==0.6.28
 dj-database-url==0.2.1
 gunicorn==0.14.6
 wsgiref==0.1.2
+PIL
