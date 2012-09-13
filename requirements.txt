@@ -2,6 +2,8 @@ Django==1.4.1
 PIL==1.1.7
 distribute==0.6.28
 dj-database-url==0.2.1
+django-storages==1.1.5
+boto==2.5.2
 gunicorn==0.14.6
 psycopg2==2.4.5
 wsgiref==0.1.2
