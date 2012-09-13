@@ -1,0 +1,11 @@
+{{ evento.titulo }}
+{{ evento.local }}
+{{ evento.data_realizacao|date:"d/m/Y" }}
+
+{% for palestra in palestras %}
+    {{ palestra.titulo }}
+    {{ palestra.descricao }}
+    {% for palestrante in palestra.palestrantes.all %}
+        {{ palestrante.nome }}
+    {% endfor %}
+{% endfor %}
