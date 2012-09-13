@@ -9,3 +9,11 @@ class EventoView(DetailView):
         context = super(EventoView, self).get_context_data(**kwargs)
         context['palestras'] = Palestra.objects.filter(evento__slug=self.kwargs['slug'])
         return context
+
+
+class EventoAtualView(EventoView):
+
+    def get_object(self, queryset=None):
+        evento = Evento.objects.latest()
+        self.kwargs['slug'] = evento.slug
+        return evento
