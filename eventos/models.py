@@ -56,6 +56,7 @@ class Evento(models.Model):
 class Profile(models.Model):
     nome = models.CharField(max_length=255)
     email = models.EmailField(max_length=100)
+    site = models.URLField(blank=True, null=True)
     twitter = models.CharField(max_length=100, blank=True, null=True)
     facebook = models.CharField(max_length=100, blank=True, null=True)
     linkedin = models.CharField(max_length=100, blank=True, null=True)
