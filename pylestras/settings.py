@@ -98,6 +98,7 @@ INSTALLED_APPS = (
     'gunicorn',
     'eventos',
     'south',
+    'gravatar',
 )
 
 # A sample logging configuration. The only tangible logging
