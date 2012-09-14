@@ -7,8 +7,8 @@
 {% block content %}
     <div class="offset1 span7">
         <h2>{{ evento.titulo }}</h2>
-        <p>{{ evento.descricao }}</p>
-        <p><strong>Local:</strong> {{ evento.local }}</p>
+        <p>{{ evento.descricao|safe }}</p>
+        <p><strong>Local:</strong> {{ evento.local|safe }}</p>
         <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
         <p><strong>Valor:</strong>
             {% if evento.valor %}
