@@ -14,7 +14,7 @@
         {% if evento.valor %}
             R$ {{ evento.valor|floatformat:2 }}
         {% else %}
-            Gratuito
+            <span class="label label-success">Gratuito</span>
         {% endif %}
     </p>
 
