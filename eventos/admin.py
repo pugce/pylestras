@@ -7,10 +7,18 @@ from eventos.models import (Evento, Profile, Inscricao,
 class EventoAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
 
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'email')
+
+class PalestraAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'evento')
+
+class PatrocinioAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'contato', 'tipo')
 
 admin.site.register(Evento, EventoAdmin)
-admin.site.register(Profile)
+admin.site.register(Profile, ProfileAdmin)
+admin.site.register(Palestra, PalestraAdmin)
+admin.site.register(Patrocinio, PatrocinioAdmin)
 admin.site.register(Inscricao)
-admin.site.register(Palestra)
 admin.site.register(Realizacao)
-admin.site.register(Patrocinio)
