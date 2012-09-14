@@ -22,7 +22,11 @@ update:
 static:
 	@heroku run  python manage.py collectstatic
 
-deploy: update syncdb static
+remove_syncdb:
+	@heroku run python manage.py syncdb --noinput
+	@heroku run python manage.py migrate
+
+deploy: update remove_syncdb static
 
 help:
 	@grep '^[^#[:space:]].*:' Makefile | awk -F ":" '{print $$1}'
