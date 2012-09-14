@@ -41,31 +41,35 @@
         <div class="patrocinio well pagination-centered">
             <h5>Patrocínio</h5>
             <hr class="lessspace"/>
-            {% if patrocinio %}
-                <ul class='patrocinio unstyled'>
-                    {% for patrocinador in patrocinio %}
-                        <li>
-                            <a href="{{ patrocinador.url }}"><img src="{{ MEDIA_URL }}{{ patrocinador.banner }}" alt="{{ apoiador }}"/></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
+            <ul class='patrocinio unstyled'>
+                {% for patrocinador in patrocinio %}
+                    <li>
+                        <a href="{{ patrocinador.url }}"><img src="{{ MEDIA_URL }}{{ patrocinador.banner }}" alt="{{ apoiador }}"/></a>
+                    </li>
+                {% empty %}
+                    <li>
+                        <a href="#patrocine"><img src="http://www.placehold.it/250x120" alt="Patrocine"/></a>
+                    </li>
+                {% endfor %}
+            </ul>
 
             <h5>Apoio</h5>
             <hr class="lessspace"/>
-            {% if apoio %}
-                <ul class='apoio unstyled'>
-                    {% for apoiador in apoio %}
-                        <li>
-                            <a href="{{ apoiador.url }}"><img src="{{ MEDIA_URL }}{{ apoiador.banner }}" alt="{{ apoiador }}"/></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
+            <ul class='apoio unstyled'>
+                {% for apoiador in apoio %}
+                    <li>
+                        <a href="{{ apoiador.url }}"><img src="{{ MEDIA_URL }}{{ apoiador.banner }}" alt="{{ apoiador }}"/></a>
+                    </li>
+                {% empty %}
+                    <li>
+                        <a href="#apoie"><img src="http://www.placehold.it/250x120" alt="Apoie"/></a>
+                    </li>
+                {% endfor %}
+            </ul>
 
-            <h5>Realização</h5>
-            <hr class="lessspace"/>
             {% if realizacao %}
+                <h5>Realização</h5>
+                <hr class="lessspace"/>
                 <ul class='realizacao unstyled'>
                     {% for realizador in realizacao %}
                         <li>
