@@ -87,6 +87,9 @@ class Palestra(models.Model):
     titulo = models.CharField('Título', max_length=100)
     descricao = models.TextField('Descrição', blank=True, null=True)
 
+    def __unicode__(self):
+        return self.titulo
+
 
 class Realizacao(models.Model):
     evento = models.ForeignKey(Evento)
