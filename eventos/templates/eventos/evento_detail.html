@@ -7,8 +7,16 @@
 {% block content %}
 
     <h2>{{ evento.titulo }}</h2>
+    <p>{{ evento.descricao }}</p>
     <p><strong>Local:</strong> {{ evento.local }}</p>
     <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
+    <p><strong>Valor:</strong>
+        {% if evento.valor %}
+            R$ {{ evento.valor|floatformat:2 }}
+        {% else %}
+            Gratuito
+        {% endif %}
+    </p>
 
     {% if palestras %}
         <ul class='palestras unstyled'>
