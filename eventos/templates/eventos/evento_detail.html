@@ -5,35 +5,78 @@
 {% endblock %}
 
 {% block content %}
+    <div class="offset1 span7">
+        <h2>{{ evento.titulo }}</h2>
+        <p>{{ evento.descricao }}</p>
+        <p><strong>Local:</strong> {{ evento.local }}</p>
+        <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
+        <p><strong>Valor:</strong>
+            {% if evento.valor %}
+                R$ {{ evento.valor|floatformat:2 }}
+            {% else %}
+                <span class="label label-success">Gratuito</span>
+            {% endif %}
+        </p>
 
-    <h2>{{ evento.titulo }}</h2>
-    <p>{{ evento.descricao }}</p>
-    <p><strong>Local:</strong> {{ evento.local }}</p>
-    <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
-    <p><strong>Valor:</strong>
-        {% if evento.valor %}
-            R$ {{ evento.valor|floatformat:2 }}
-        {% else %}
-            <span class="label label-success">Gratuito</span>
+        {% if palestras %}
+            <ul class='palestras unstyled'>
+                {% for palestra in palestras %}
+                <li class='palestra well'>
+                    <h4>{{ palestra.titulo }}</h4>
+                    <hr class="lessspace"/>
+                    <p>{{ palestra.descricao }}</p>
+                    <ul class='palestrantes unstyled'>
+                        {% for palestrante in palestra.palestrantes.all %}
+                            <li class='palestrante'>
+                                <a href="#">{{ palestrante.nome }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
         {% endif %}
-    </p>
-
-    {% if palestras %}
-        <ul class='palestras unstyled'>
-            {% for palestra in palestras %}
-            <li class='palestra well'>
-                <h4>{{ palestra.titulo }}</h4>
-                <p>{{ palestra.descricao }}</p>
-                <ul class='palestrantes unstyled'>
-                    {% for palestrante in palestra.palestrantes.all %}
-                        <li class='palestrante'>
-                            <a href="#">{{ palestrante.nome }}</a>
+    </div>
+    <div class="span3">
+        <div class="patrocinio well pagination-centered">
+            <h5>Patrocinadores</h5>
+            <hr class="lessspace"/>
+            {% if patrocinio %}
+                <ul class='patrocinio unstyled'>
+                    {% for patrocinador in patrocinio %}
+                        <li>
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ patrocinador.banner }}" alt="{{ apoiador }}"/></a>
                         </li>
                     {% endfor %}
                 </ul>
-            </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+            {% endif %}
+
+            <h5>Apoio</h5>
+            <hr class="lessspace"/>
+            {% if apoio %}
+                <ul class='apoio unstyled'>
+                    {% for apoiador in apoio %}
+                        <li>
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ apoiador.banner }}" alt="{{ apoiador }}"/></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <h5>Realização</h5>
+            <hr class="lessspace"/>
+            {% if realizacao %}
+                <ul class='realizacao unstyled'>
+                    {% for realizador in realizacao %}
+                        <li>
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ realizador.banner }}" alt="{{ apoiador }}"/></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+
+        </div>
+    </div>
 
 {% endblock %}
