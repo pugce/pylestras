@@ -95,8 +95,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'eventos',
     'gunicorn',
+    'eventos',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
