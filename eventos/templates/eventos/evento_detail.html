@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}
+ - {{ evento.titulo }}
+{% endblock %}
+
 {% block content %}
 
     <h2>{{ evento.titulo }}</h2>
@@ -7,14 +11,16 @@
     <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
 
     {% if palestras %}
-        <ul class='palestras'>
+        <ul class='palestras unstyled'>
             {% for palestra in palestras %}
-            <li class='palestra'>
+            <li class='palestra well'>
                 <h4>{{ palestra.titulo }}</h4>
                 <p>{{ palestra.descricao }}</p>
-                <ul class='palestrantes'>
+                <ul class='palestrantes unstyled'>
                     {% for palestrante in palestra.palestrantes.all %}
-                        <li class='palestrante'>{{ palestrante.nome }}</li>
+                        <li class='palestrante'>
+                            <a href="#">{{ palestrante.nome }}</a>
+                        </li>
                     {% endfor %}
                 </ul>
             </li>
