@@ -22,7 +22,7 @@ update:
 static:
 	@heroku run  python manage.py collectstatic
 
-deploy: update syncdb collectstatic
+deploy: update syncdb static
 
 help:
 	@grep '^[^#[:space:]].*:' Makefile | awk -F ":" '{print $$1}'
