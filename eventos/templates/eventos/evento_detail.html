@@ -50,7 +50,7 @@
                     </li>
                 {% empty %}
                     <li>
-                        <a href="#patrocine"><img src="http://www.placehold.it/250x120" alt="Patrocine"/></a>
+                        <a href="#patrocine" role="button"  data-toggle="modal"><img src="http://www.placehold.it/250x120" alt="Patrocine"/></a>
                     </li>
                 {% endfor %}
             </ul>
@@ -64,7 +64,7 @@
                     </li>
                 {% empty %}
                     <li>
-                        <a href="#apoie"><img src="http://www.placehold.it/250x120" alt="Apoie"/></a>
+                        <a href="#patrocine" role="button"  data-toggle="modal"><img src="http://www.placehold.it/250x120" alt="Patrocine"/></a>
                     </li>
                 {% endfor %}
             </ul>
@@ -82,5 +82,5 @@
             {% endif %}
         </div>
     </div>
-
+    {% include 'eventos/patrocine.html' %}
 {% endblock %}
