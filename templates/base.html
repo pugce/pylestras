@@ -1,12 +1,14 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         {% block meta %}
         {% endblock %}
-        <title>Pylestras{% block title %}{% endblock %}</title>
+        <title>PUG-CE{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap.min.css" %}" />
         <link rel="stylesheet" href="{% static "css/style.css" %}" />
+        <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap-responsive.min.css" %}" />
 
         {% block style %}
         {% endblock %}
@@ -19,11 +21,24 @@
     </head>
     <body>
 
-    <div id="content">
-        {% block content %}
-        {% endblock %}
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="page-header">
+                <h1>PUG-CE <small>Python Users Groups Ceará</small></h1>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="content span8">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="span4">
+            </div>
+        </div>
     </div>
 
+    <script src="{% static "js/jquery-1.8.1.min.js" %}"></script>
+    <script src="{% static "bootstarp/js/bootstrap.min.js" %}"></script>
     {% block extra_body %}
     {% endblock %}
 
