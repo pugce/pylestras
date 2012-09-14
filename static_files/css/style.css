@@ -1,0 +1,8 @@
+.logo-pug {
+    padding: 30px 60px 52px 0;
+    background: url("../img/logo_pugce.png") scroll center left no-repeat transparent;
+    color: transparent;
+}
+.logo-pug:hover {
+    color: transparent;
+}
