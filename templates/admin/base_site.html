@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+
+{% block extrahead %}
+    <script type="text/javascript">window.__admin_media_prefix__ = "{{ STATIC_URL }}admin/";</script>
+    <!-- workaround to fix the links to static files added via javascript -->
+{% endblock %}
+
+{% block title %}{{ title }} | Pylestras{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">Pylestras</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
