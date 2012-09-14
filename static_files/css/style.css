@@ -6,3 +6,7 @@
 .logo-pug:hover {
     color: transparent;
 }
+
+body {
+    margin-top: 20px;
+}
