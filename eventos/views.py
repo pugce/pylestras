@@ -9,12 +9,11 @@ class EventoView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(EventoView, self).get_context_data(**kwargs)
-        context['palestras'] = Palestra.objects.filter(evento__slug=self.kwargs['slug'])
-        #TODO: as consultas abaixo nao trazem resultado real para multiplos eventos
-        # necessario refatorar os modelos.
-        context['patrocinio'] = Patrocinio.objects.filter(tipo=PA_FINANCEIRO)
-        context['apoio'] = Patrocinio.objects.exclude(tipo__in=[PA_FINANCEIRO, PA_REALIZACAO])
-        context['realizacao'] = Patrocinio.objects.filter(tipo=PA_REALIZACAO)
+        evento = self.object
+        context['palestras'] = evento.palestra_set.all()
+        context['patrocinio'] = evento.patrocinadores.filter(tipo=PA_FINANCEIRO)
+        context['apoio'] = evento.patrocinadores.exclude(tipo__in=[PA_FINANCEIRO, PA_REALIZACAO])
+        context['realizacao'] = evento.patrocinadores.filter(tipo=PA_REALIZACAO)
         return context
 
 
