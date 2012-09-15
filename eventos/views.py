@@ -1,7 +1,7 @@
 from django.views.generic import DetailView
 from django.http import Http404
 
-from eventos.models import Evento, Palestra, Patrocinio
+from eventos.models import Evento, Palestra
 from eventos.models import PA_FINANCEIRO, PA_REALIZACAO
 
 class EventoView(DetailView):
@@ -26,3 +26,7 @@ class EventoAtualView(EventoView):
             raise Http404
         self.kwargs['slug'] = evento.slug
         return evento
+
+class PalestraDetailView(DetailView):
+    model = Palestra
+

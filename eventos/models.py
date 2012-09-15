@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 from django.db import models
+from django.core.urlresolvers import reverse
+
 
 STPG_PAGO, STPG_PENDENTE, STPG_CORTESIA = True, False, None
 
@@ -49,6 +51,9 @@ class Evento(models.Model):
         get_latest_by = 'data_realizacao'
         ordering = ['-data_realizacao']
 
+    def get_absolute_url(self):
+        return reverse('evento_detail', kwargs={'slug': self.slug})
+
     def __unicode__(self):
         return self.titulo
 
@@ -86,6 +91,9 @@ class Palestra(models.Model):
     palestrantes = models.ManyToManyField(Profile)
     titulo = models.CharField('Título', max_length=100)
     descricao = models.TextField('Descrição', blank=True, null=True)
+
+    def get_absolute_url(self):
+        return reverse('palestra_detail', kwargs={'pk': self.id})
 
     def __unicode__(self):
         return self.titulo

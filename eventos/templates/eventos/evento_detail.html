@@ -23,7 +23,7 @@
             <ul class='palestras unstyled'>
                 {% for palestra in palestras %}
                 <li class='palestra well'>
-                    <h4>{{ palestra.titulo }}</h4>
+                    <h4><a href="{{ palestra.get_absolute_url }}">{{ palestra.titulo }}</a></h4>
                     <hr class="lessspace"/>
                     <p>{{ palestra.descricao }}</p>
                     <ul class='palestrantes unstyled'>
