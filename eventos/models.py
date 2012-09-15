@@ -94,7 +94,7 @@ class Palestra(models.Model):
     descricao = models.TextField('Descrição', blank=True, null=True)
 
     def get_absolute_url(self):
-        return reverse('palestra_detail', kwargs={'pk': self.id})
+        return reverse('palestra_detail', kwargs={'slug': self.slug})
 
     def __unicode__(self):
         return self.titulo
