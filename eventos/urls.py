@@ -7,6 +7,6 @@ urlpatterns = patterns('',
     url(r'^$', EventoAtualView.as_view(), name='evento_index'),
     url(r'^evento/(?P<slug>[-\w]+)/$',
         EventoView.as_view(), name="evento_detail"),
-    url(r'^palestra/(?P<pk>\d+)/$',
+    url(r'^palestra/(?P<slug>[-\w]+)/$',
         PalestraDetailView.as_view(), name="palestra_detail"),
 )
