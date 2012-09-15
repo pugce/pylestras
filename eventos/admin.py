@@ -6,6 +6,7 @@ from eventos.models import (Evento, Profile, Inscricao,
 
 class EventoAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
+    list_display = ('titulo', 'data_realizacao', 'publicado')
 
 
 class ProfileAdmin(admin.ModelAdmin):
