@@ -10,8 +10,13 @@ class PalestraInline(admin.TabularInline):
 
 class EventoAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,                     {'fields': ['titulo']}),
-        ('Informações sobre data', {'fields': ['data_realizacao'], 'classes': ['collapse']}),
+        (None,                           {'fields': ['titulo']}),
+        ('Publicado?',                   {'fields': ['publicado']}),
+        ('Slug',                         {'fields': ['slug']}),
+        ('Informações sobre data',       {'fields': ['data_realizacao'], 'classes': ['collapse']}),
+        ('Informações sobre o evento',   {'fields': ['local', 'descricao'], 'classes': ['collapse']}),
+        ('Informações sobre inscricoes', {'fields': ['valor', 'data_limite_inscricao', 'limite_inscricoes'], 'classes': ['collapse']}),
+        ('Patrocinadores',               {'fields': ['patrocinadores'], 'classes': ['collapse']}),
     ]
     inlines = [PalestraInline]
 
