@@ -12,7 +12,7 @@
         <h4>{{ palestra.titulo }}</h4>
         <hr class="lessspace"/>
         <p><strong>Evento:</strong> <a href="{{ palestra.evento.get_absolute_url }}">{{ palestra.evento.titulo }}</a></p>
-        <p>{{ palestra.descricao }}</p>
+        <p>{{ palestra.descricao|safe }}</p>
         <ul class='palestrantes unstyled'>
             {% for palestrante in palestra.palestrantes.all %}
                 <li class='palestrante'>
