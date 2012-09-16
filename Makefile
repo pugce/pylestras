@@ -14,7 +14,7 @@ settings:
 	cp pylestras/local_settings.example.py pylestras/local_settings.py
 
 run:
-	@python manage.py runserver 0.0.0.0:8000
+	$(VIRTUAL_ENV)/bin/python manage.py runserver 0.0.0.0:8000
 
 update:
 	@git push heroku master
@@ -27,6 +27,10 @@ remove_syncdb:
 	@heroku run python manage.py migrate
 
 deploy: update remove_syncdb static
+
+loaddemo: syncdb
+	$(VIRTUAL_ENV)/bin/python manage.py loaddata demo/demo_data.json
+	@cp -R demo/media .
 
 help:
 	@grep '^[^#[:space:]].*:' Makefile | awk -F ":" '{print $$1}'
