@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load gravatar %}
+
+{% block title %}
+- {{ profile.nome }}
+{% endblock %}
+
+{% block content %}
+<div class="offset1 span10">
+    <div class="well">
+        <h2>{{ profile.nome }}</h2>
+        <hr class="lessspace"/>
+        <a href="{{ profile.site }}"><img src="{% gravatar_for_email profile.email %}" alt="{{ profile.nome }}" /></a>
+        <ul class="unstyled">
+            {% if profile.cv %}
+                <li><strong>Mini-currículo:</strong> {{ profile.cv }}</li>
+            {% endif %}
+            {% if profile.site %}
+                <li><a href="{{ profile.site }}">{{ profile.site }}</a></li>
+            {% endif %}
+            {% if profile.twitter %}
+                <li><a href="http://twitter.com/{{ profile.twitter }}">@{{ profile.twitter }}</a></li>
+            {% endif %}
+            {% if profile.facebook %}
+                <li><a href="{{ profile.facebook }}">Facebook</a></li>
+            {% endif %}
+            {% if profile.linkedin %}
+                <li><a href="{{ profile.linkedin }}">LinkedIn</a></li>
+            {% endif %}
+            {% if profile.bitbucket %}
+                <li><a href="{{ profile.bitbucket }}">Bitbucket</a></li>
+            {% endif %}
+            {% if profile.github %}
+                <li><a href="{{ profile.github }}">Github</a></li>
+            {% endif %}
+        </ul>
+        {% if palestras %}
+            <hr class="lessspace"/>
+            <h4>Palestra{{ palestras|pluralize }}</h4>
+            <ul class="unstyled">
+            {% for palestra in palestras %}
+                <li><h5><a href="{{ palestra.get_absolute_url }}">{{ palestra.titulo }}</a><h5><li>
+            {% endfor %}
+            </ul>
+
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

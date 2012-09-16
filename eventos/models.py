@@ -69,6 +69,9 @@ class Profile(models.Model):
     bitbucket = models.URLField(blank=True, null=True)
     cv = models.TextField(blank=True, null=True)
 
+    def get_absolute_url(self):
+        return reverse('profile_detail', kwargs={'pk': self.pk})
+
     def __unicode__(self):
         return self.nome
 

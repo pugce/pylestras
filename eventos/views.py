@@ -1,7 +1,7 @@
 from django.views.generic import DetailView
 from django.http import Http404
 
-from eventos.models import Evento, Palestra
+from eventos.models import Evento, Palestra, Profile
 from eventos.models import PA_FINANCEIRO, PA_REALIZACAO
 
 class EventoView(DetailView):
@@ -27,6 +27,17 @@ class EventoAtualView(EventoView):
         self.kwargs['slug'] = evento.slug
         return evento
 
+
 class PalestraDetailView(DetailView):
     model = Palestra
+
+
+class ProfileDetailView(DetailView):
+    model = Profile
+
+    def get_context_data(self, **kwargs):
+        context = super(ProfileDetailView, self).get_context_data(**kwargs)
+        profile = self.object
+        context['palestras'] = profile.palestra_set.all()
+        return context
 

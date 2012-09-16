@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, url
 
-from eventos.views import EventoView, EventoAtualView, PalestraDetailView
+from eventos.views import (EventoView, EventoAtualView, PalestraDetailView,
+                           ProfileDetailView)
 
 
 urlpatterns = patterns('',
@@ -9,4 +10,7 @@ urlpatterns = patterns('',
         EventoView.as_view(), name="evento_detail"),
     url(r'^palestra/(?P<slug>[-\w]+)/$',
         PalestraDetailView.as_view(), name="palestra_detail"),
+    url(r'^profile/(?P<pk>\d+)/$',
+        ProfileDetailView.as_view(), name="profile_detail"),
+
 )
