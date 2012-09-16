@@ -25,7 +25,7 @@
                 <li class='palestra well'>
                     <h4><a href="{{ palestra.get_absolute_url }}">{{ palestra.titulo }}</a></h4>
                     <hr class="lessspace"/>
-                    <p>{{ palestra.descricao }}</p>
+                    <p>{{ palestra.descricao|safe }}</p>
                     <ul class='palestrantes unstyled'>
                         {% for palestrante in palestra.palestrantes.all %}
                             <li class='palestrante'>
