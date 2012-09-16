@@ -6,7 +6,7 @@ from eventos.models import (Evento, Profile, Inscricao,
 
 class PalestraInline(admin.TabularInline):
     model = Palestra
-    extra = 3
+    extra = 1
 
 class EventoAdmin(admin.ModelAdmin):
     fieldsets = [
