@@ -13,3 +13,7 @@ Para facilitar a instalação você pode seguir os seguintes passos. Necessário
     virtualenv --distribute --no-site-packages venv
     source venv/bin/activate
     make setup
+
+Você pode carregar dados de demonstração para ajudar no desenvolvimento:
+
+    make loaddemo
