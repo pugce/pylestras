@@ -6,9 +6,12 @@ from eventos.models import (Evento, Profile, Inscricao,
 
 class PalestraInline(admin.TabularInline):
     model = Palestra
+    prepopulated_fields = { 'slug': ('titulo',)}
     extra = 1
 
+
 class EventoAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("titulo",)}
     fieldsets = [
         (None,                           {'fields': ['titulo']}),
         ('Publicado?',                   {'fields': ['publicado']}),
@@ -26,18 +29,8 @@ class EventoAdmin(admin.ModelAdmin):
     date_hierarchy = 'data_realizacao'
 
 
-# class EventoAdmin(admin.ModelAdmin):
-#     prepopulated_fields = {"slug": ("titulo",)}
-#     list_display = ('titulo', 'data_realizacao', 'publicado')
-
-
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email')
-
-
-# class PalestraAdmin(admin.ModelAdmin):
-#     list_display = ('titulo', 'evento')
-#     prepopulated_fields = {"slug": ("titulo",)}
 
 
 class PatrocinioAdmin(admin.ModelAdmin):
@@ -46,7 +39,6 @@ class PatrocinioAdmin(admin.ModelAdmin):
 
 admin.site.register(Evento, EventoAdmin)
 admin.site.register(Profile, ProfileAdmin)
-#admin.site.register(Palestra, PalestraAdmin)
 admin.site.register(Patrocinio, PatrocinioAdmin)
 admin.site.register(Inscricao)
 admin.site.register(Realizacao)
