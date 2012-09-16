@@ -30,7 +30,7 @@ deploy: update remove_syncdb static
 
 loaddemo: syncdb
 	$(VIRTUAL_ENV)/bin/python manage.py loaddata demo/demo_data.json
-	@cp -R demo/demo_media .
+	@cp -R demo/demo_media media
 
 help:
 	@grep '^[^#[:space:]].*:' Makefile | awk -F ":" '{print $$1}'
