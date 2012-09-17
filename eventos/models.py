@@ -32,9 +32,9 @@ class PublicoManager(models.Manager):
 
 
 class Evento(models.Model):
-    publicado = models.BooleanField(default=False)
-    data_realizacao = models.DateTimeField(blank=True, null=True)
-    local = models.TextField(blank=True, null=True)
+    publicado = models.BooleanField('Publicar?', default=False)
+    data_realizacao = models.DateTimeField('Data de realização', blank=True, null=True)
+    local = models.TextField('Local de realização', blank=True, null=True)
     titulo = models.CharField('Título', max_length=100)
     slug = models.SlugField(max_length=100)
     descricao = models.TextField('Descrição', blank=True, null=True)
@@ -42,7 +42,7 @@ class Evento(models.Model):
                                 help_text='Em reais (R$)')
     data_limite_inscricao = models.DateField(blank=True, null=True)
     limite_inscricoes = models.PositiveIntegerField('Limite de inscrições', blank=True, null=True)
-    patrocinadores = models.ManyToManyField('Patrocinio')
+    patrocinadores = models.ManyToManyField('Patrocínio')
 
     objects = models.Manager()
     publicados = PublicoManager()
