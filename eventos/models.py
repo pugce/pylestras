@@ -104,6 +104,9 @@ class Palestra(models.Model):
 
 
 class Realizacao(models.Model):
+    '''
+    Responsáveis pela organização do evento.
+    '''
     evento = models.ForeignKey(Evento)
     profile = models.ForeignKey(Profile)
 
