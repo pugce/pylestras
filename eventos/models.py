@@ -23,6 +23,7 @@ CHOICES_TIPO_PATROCINIO = (
     (PA_OUTRO, 'outro'),
 )
 
+
 class PublicoManager(models.Manager):
     def get_query_set(self):
         query_set = super(PublicoManager, self).get_query_set()
@@ -38,11 +39,10 @@ class Evento(models.Model):
     slug = models.SlugField(max_length=100)
     descricao = models.TextField('Descrição', blank=True, null=True)
     valor = models.DecimalField(default=0, max_digits=8, decimal_places=2,
-        help_text='Em reais (R$)')
+                                help_text='Em reais (R$)')
     data_limite_inscricao = models.DateField(blank=True, null=True)
     limite_inscricoes = models.PositiveIntegerField('Limite de inscrições', blank=True, null=True)
     patrocinadores = models.ManyToManyField('Patrocinio')
-
 
     objects = models.Manager()
     publicados = PublicoManager()
@@ -114,9 +114,10 @@ class Realizacao(models.Model):
 class Patrocinio(models.Model):
     tipo = models.IntegerField(choices=CHOICES_TIPO_PATROCINIO)
     valor = models.DecimalField(default=0, max_digits=8, decimal_places=2,
-        help_text='Em reais (R$)')
+                                help_text='Em reais (R$)')
     descricao = models.TextField('Descrição',
-        help_text='Caso não seja financeiro', blank=True, null=True)
+                                 help_text='Caso não seja financeiro',
+                                 blank=True, null=True)
     contato = models.CharField(max_length=100)
     email = models.EmailField(blank=True, null=True)
     telefone = models.CharField(max_length=20, blank=True, null=True)
