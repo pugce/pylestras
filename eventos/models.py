@@ -42,7 +42,7 @@ class Evento(models.Model):
                                 help_text='Em reais (R$)')
     data_limite_inscricao = models.DateField(blank=True, null=True)
     limite_inscricoes = models.PositiveIntegerField('Limite de inscrições', blank=True, null=True)
-    patrocinadores = models.ManyToManyField('Patrocínio')
+    patrocinadores = models.ManyToManyField('Patrocinio', verbose_name='Patrocínios')
 
     objects = models.Manager()
     publicados = PublicoManager()
