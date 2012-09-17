@@ -14,13 +14,10 @@ class PalestraInline(admin.TabularInline):
 class EventoAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
     fieldsets = [
-        (None,                           {'fields': ['titulo']}),
-        ('Publicado?',                   {'fields': ['publicado']}),
-        ('Slug',                         {'fields': ['slug']}),
-        ('Informações sobre data',       {'fields': ['data_realizacao'], 'classes': ['collapse']}),
-        ('Informações sobre o evento',   {'fields': ['local', 'descricao'], 'classes': ['collapse']}),
+        (None,                           {'fields': ['titulo', 'slug', 'publicado']}),
+        ('Informações sobre o evento',   {'fields': ['local', 'descricao', 'data_realizacao']}),
+        ('Patrocinadores',               {'fields': ['patrocinadores']}),
         ('Informações sobre inscricoes', {'fields': ['valor', 'data_limite_inscricao', 'limite_inscricoes'], 'classes': ['collapse']}),
-        ('Patrocinadores',               {'fields': ['patrocinadores'], 'classes': ['collapse']}),
     ]
     inlines = [PalestraInline]
     list_display = ('titulo', 'data_realizacao', 'publicado')
