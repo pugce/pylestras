@@ -4,6 +4,7 @@ from django.http import Http404
 from eventos.models import Evento, Palestra, Profile
 from eventos.models import PA_FINANCEIRO, PA_REALIZACAO
 
+
 class EventoView(DetailView):
     model = Evento
 
@@ -40,4 +41,3 @@ class ProfileDetailView(DetailView):
         profile = self.object
         context['palestras'] = profile.palestra_set.all()
         return context
-
