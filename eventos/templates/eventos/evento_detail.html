@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% load gravatar %}
+{% load static from staticfiles %}
 
+{% block meta %}
+    <meta property="og:title" content="{{ evento.titulo }}"/>
+    <meta property="og:image" content="{% static "img/logo_pugce.png" %}"/>
+    <meta property="og:site_name" content="Pylestras - Python User Groups Ceará"/>
+    <meta property="og:description" content="{{ evento.descricao|striptags }}"/>
+{% endblock %}
 {% block title %}
  - {{ evento.titulo }}
 {% endblock %}
