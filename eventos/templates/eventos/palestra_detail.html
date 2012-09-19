@@ -16,8 +16,8 @@
         <ul class='palestrantes unstyled'>
             {% for palestrante in palestra.palestrantes.all %}
                 <li class='palestrante'>
-                    <a href="{{ palestrante.site }}"><img src="{% gravatar_for_email palestrante.email %}" alt="{{ palestrante.nome }}" /></a>
-                    <a href="{{ palestrante.site }}">{{ palestrante.nome }}</a>
+                    <a href="{{ palestrante.get_absolute_url }}"><img src="{% gravatar_for_email palestrante.email %}" alt="{{ palestrante.nome }}" /></a>
+                    <a href="{{ palestrante.get_absolute_url }}">{{ palestrante.nome }}</a>
                 </li>
             {% endfor %}
         </ul>
