@@ -8,3 +8,4 @@ local_settings.py
 .env
 static
 media
+venv
