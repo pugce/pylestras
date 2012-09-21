@@ -11,7 +11,7 @@ class EventoView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(EventoView, self).get_context_data(**kwargs)
         evento = self.object
-        context['palestras'] = evento.palestra_set.all()
+        context['palestras'] = evento.palestra_set.all().prefetch_related('palestrantes')
         context['patrocinio'] = evento.patrocinadores.filter(tipo=PA_FINANCEIRO)
         context['apoio'] = evento.patrocinadores.exclude(tipo__in=[PA_FINANCEIRO, PA_REALIZACAO])
         context['realizacao'] = evento.patrocinadores.filter(tipo=PA_REALIZACAO)
