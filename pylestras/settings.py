@@ -6,6 +6,7 @@ import dj_database_url
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+INTERNAL_IPS = ('127.0.0.1',)
 
 ADMINS = (
     ('Fábio Cerqueira', 'fabio@cerqueira.me'),
