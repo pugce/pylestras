@@ -94,7 +94,7 @@ class Palestra(models.Model):
     palestrantes = models.ManyToManyField(Profile)
     titulo = models.CharField('Título', max_length=100)    
     slug = models.SlugField(max_length=100)
-    horario = models.DateTimeField(blank=True, null=True)
+    horario = models.DateTimeField('Horário', blank=True, null=True)
     descricao = models.TextField('Descrição', blank=True, null=True)
 
     def get_absolute_url(self):
