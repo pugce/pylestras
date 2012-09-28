@@ -109,6 +109,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'gunicorn',
     'eventos',
+    'blog',
+    'taggit',
     'south',
     'gravatar',
 )
