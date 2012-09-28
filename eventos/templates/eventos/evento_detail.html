@@ -12,20 +12,22 @@
  - {{ evento.titulo }}
 {% endblock %}
 
-{% block content %}
-    <div class="offset1 span7">
-        <h2>{{ evento.titulo }}</h2>
-        <p>{{ evento.descricao|safe }}</p>
-        <p><strong>Local:</strong> {{ evento.local|safe }}</p>
-        <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
-        <p><strong>Valor:</strong>
-            {% if evento.valor %}
-                R$ {{ evento.valor|floatformat:2 }}
-            {% else %}
-                <span class="label label-success">Gratuito</span>
-            {% endif %}
-        </p>
+{% block event_desc %}
+    <h2>{{ evento.titulo }}</h2>
+    <p>{{ evento.descricao|safe }}</p>
+    <p><strong>Local:</strong> {{ evento.local|safe }}</p>
+    <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
+    <p><strong>Valor:</strong>
+        {% if evento.valor %}
+            R$ {{ evento.valor|floatformat:2 }}
+        {% else %}
+            <span class="label label-success">Gratuito</span>
+        {% endif %}
+    </p>
+{% endblock %}
 
+{% block content %}
+    <div class="span7">
         {% if palestras %}
             <ul class='palestras unstyled'>
                 {% for palestra in palestras %}
@@ -46,8 +48,28 @@
             </ul>
         {% endif %}
     </div>
-    <div class="span3">
-        <div class="patrocinio well pagination-centered">
+    <div class="span3 pagination-centered">
+        <div class="btn-group">
+            <button style="width: 100%;" class="btn dropdown-toggle" data-toggle="dropdown">Todas as edições <span class="caret"></span></button>
+            <ul style="width: 100%;" class="dropdown-menu">
+                {% for evento in eventos %}
+                    <li><a tabindex="-1" href="{{ evento.get_absolute_url }}">{{ evento.titulo }}</a></li>
+                {% endfor %}
+            </ul>
+        </div><br>
+        {% if realizacao %}
+            <h5>Realização</h5>
+            <hr class="lessspace"/>
+            <ul class='realizacao unstyled'>
+                {% for realizador in realizacao %}
+                    <li>
+                        <a href="{{ realizador.url }}"><img src="{{ MEDIA_URL }}{{ realizador.banner }}" alt="{{ apoiador }}"/></a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}<br>
+        <div class="patrocinio">
+            <div class="fb-like" data-href="http://pylestras.org" data-send="false" data-width="355" data-show-faces="false"></div>
             <h5>Patrocínio</h5>
             <hr class="lessspace"/>
             <ul class='patrocinio unstyled'>
@@ -61,7 +83,7 @@
                     </li>
                 {% endfor %}
             </ul>
-
+            <br>
             <h5>Apoio</h5>
             <hr class="lessspace"/>
             <ul class='apoio unstyled'>
@@ -75,18 +97,6 @@
                     </li>
                 {% endfor %}
             </ul>
-
-            {% if realizacao %}
-                <h5>Realização</h5>
-                <hr class="lessspace"/>
-                <ul class='realizacao unstyled'>
-                    {% for realizador in realizacao %}
-                        <li>
-                            <a href="{{ realizador.url }}"><img src="{{ MEDIA_URL }}{{ realizador.banner }}" alt="{{ apoiador }}"/></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
         </div>
     </div>
     {% include 'eventos/patrocine.html' %}
