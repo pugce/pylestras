@@ -1,12 +1,8 @@
-.logo-pug {
-    padding: 30px 60px 52px 0;
-    background: url("../img/logo_pugce.png") scroll center left no-repeat transparent;
-    color: transparent;
-}
-.logo-pug:hover {
-    color: transparent;
+.logo-pylestras {
+    margin-left: -10px;
+    margin-top: 10px;
 }
 
 body {
-    margin-top: 20px;
+    margin-top: 10px;
 }
