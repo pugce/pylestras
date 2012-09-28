@@ -69,6 +69,10 @@ class Profile(models.Model):
     bitbucket = models.URLField(blank=True, null=True)
     cv = models.TextField(blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'Perfil'
+        verbose_name_plural = 'Perfis'
+
     def get_absolute_url(self):
         return reverse('profile_detail', kwargs={'pk': self.pk})
 
@@ -84,6 +88,10 @@ class Inscricao(models.Model):
     data_pagamento = models.DateTimeField(blank=True, null=True)
     data_inscricao = models.DateTimeField(auto_now_add=True)
     codigo = models.CharField(max_length=12)
+
+    class Meta:
+        verbose_name = 'Inscrição'
+        verbose_name_plural = 'Inscrições'
 
     def __unicode__(self):
         return u'Inscrição %05d' % self.id
