@@ -6,15 +6,15 @@
 {% endblock %}
 
 {% block event_desc %}
-    <div class='palestra well'>
-        <h4>{{ palestra.titulo }}</h4>
+    <div class='palestra'>
+        <h2>{{ palestra.titulo }}</h2>
         <hr class="lessspace"/>
         <p><strong>Evento:</strong> <a href="{{ palestra.evento.get_absolute_url }}">{{ palestra.evento.titulo }}</a></p>
         <p>{{ palestra.descricao|safe }}</p>
         <ul class='palestrantes unstyled'>
             {% for palestrante in palestra.palestrantes.all %}
                 <li class='palestrante'>
-                    <a href="{{ palestrante.get_absolute_url }}"><img src="{% gravatar_for_email palestrante.email %}" alt="{{ palestrante.nome }}" /></a>
+                    <a href="{{ palestrante.get_absolute_url }}"><img class="img-polaroid" src="{% gravatar_for_email palestrante.email %}" alt="{{ palestrante.nome }}" /></a>
                     <a href="{{ palestrante.get_absolute_url }}">{{ palestrante.nome }}</a>
                 </li>
             {% endfor %}
