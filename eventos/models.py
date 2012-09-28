@@ -37,6 +37,7 @@ class Evento(models.Model):
     local = models.TextField('Local de realização', blank=True, null=True)
     titulo = models.CharField('Título', max_length=100)
     slug = models.SlugField(max_length=100)
+    logo = models.ImageField(upload_to='logo', blank=True, null=True)
     descricao = models.TextField('Descrição', blank=True, null=True)
     valor = models.DecimalField(default=0, max_digits=8, decimal_places=2,
                                 help_text='Em reais (R$)')
