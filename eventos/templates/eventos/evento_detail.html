@@ -38,7 +38,7 @@
                     <ul class='palestrantes unstyled'>
                         {% for palestrante in palestra.palestrantes.all %}
                             <li class='palestrante'>
-                                <a href="{{ palestrante.get_absolute_url }}"><img src="{% gravatar_for_email palestrante.email %}" alt="{{ palestrante.nome }}" /></a>
+                                <a href="{{ palestrante.get_absolute_url }}"><img class="img-polaroid" src="{% gravatar_for_email palestrante.email %}" alt="{{ palestrante.nome }}" /></a>
                                 <a href="{{ palestrante.get_absolute_url }}">{{ palestrante.nome }}</a>
                             </li>
                         {% endfor %}
@@ -57,6 +57,7 @@
                 {% endfor %}
             </ul>
         </div><br>
+        <div class="fb-like" data-href="http://pylestras.org" data-send="false" data-width="355" data-show-faces="false"></div><br>
         {% if realizacao %}
             <h5>Realização</h5>
             <hr class="lessspace"/>
@@ -69,7 +70,6 @@
             </ul>
         {% endif %}<br>
         <div class="patrocinio">
-            <div class="fb-like" data-href="http://pylestras.org" data-send="false" data-width="355" data-show-faces="false"></div>
             <h5>Patrocínio</h5>
             <hr class="lessspace"/>
             <ul class='patrocinio unstyled'>
