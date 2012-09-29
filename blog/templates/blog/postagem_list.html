@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="offset1 span7">
+    {% for postagem in object_list %}
+        {% include "blog/includes/postagem.html" %}
+    {% empty %}
+    <h3>Nenhuma postagem publicada até o momento.</h3>
+    {% endfor %}
+
+    {% if is_paginated %}
+    <div class="pagination">
+        <span class="page-links">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">página anterior</a>
+            {% endif %}
+            <span class="page-current">
+                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+            </span>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">próxima página</a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}
