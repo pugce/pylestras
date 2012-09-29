@@ -8,6 +8,9 @@
         {% endblock %}
         <title>PUG-CE{% block title %}{% endblock %}</title>
         <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon" />
+        <link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap.min.css" %}" />
         <link rel="stylesheet" href="{% static "css/style.css" %}" />
         <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap-responsive.min.css" %}" />
@@ -26,11 +29,9 @@
         <div class="row">
             <div class="content span11 offset1">
                 <div class="row">
-                    <div class="span3">
-                        <a href="{% url evento_index %}">
-                            <img class="logo-pylestras" src="{% static "img/logo-pylestras.png" %}" width="270" height="231">
-                        </a>
-                    </div>
+                    <a class="span3 logo-pylestras" href="{% url evento_index %}">
+                        <span class="versao">V</span>
+                    </a>
                     <div class="span6">
                         {% block event_desc %}{% endblock %}
                     </div>

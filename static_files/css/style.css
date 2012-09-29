@@ -1,8 +1,32 @@
-.logo-pylestras {
-    margin-left: -10px;
-    margin-top: 10px;
-}
-
 body {
     margin-top: 10px;
+    background-image: url("../img/wood-texture.png");
+    font-family: 'Numans', sans-serif;
+}
+.logo-pylestras {
+    background: transparent url("../img/pylestras-logo-vazia.png");
+    height: 230px;
+}
+.logo-pylestras:hover { text-decoration: none }
+.versao {
+    display: block;
+    width: 92px;
+    font-family: 'Crete Round', serif;
+    font-size: 3em;
+    margin-top: 1.3em;
+    text-align: center;
+    color: #fde6ce;
+}
+.well {
+    background: #feefdf url("../img/wood-texture-well.png");
+    border: 1px solid #fbf6f1;
+}
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #dfcfbf;
+    border-bottom: 1px solid #fbf6f1;
+}
+h4 > a {
+    font-family: 'Coda', cursive;
 }
