@@ -1,8 +1,22 @@
+body {
+    margin-top: 10px;
+    background-image: url("../img/wood-texture.png");
+    font-family: 'Numans', sans-serif;
+}
 .logo-pylestras {
     margin-left: -10px;
     margin-top: 10px;
 }
-
-body {
-    margin-top: 10px;
+.well {
+    background: #feefdf url("../img/wood-texture-well.png");
+    border: 1px solid #fbf6f1;
+}
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #dfcfbf;
+    border-bottom: 1px solid #fbf6f1;
+}
+h4 > a {
+    font-family: 'Coda', cursive;
 }
