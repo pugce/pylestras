@@ -37,6 +37,7 @@ class Evento(models.Model):
     local = models.TextField('Local de realização', blank=True, null=True)
     titulo = models.CharField('Título', max_length=100)
     slug = models.SlugField(max_length=100)
+    logo = models.ImageField(upload_to='logo', blank=True, null=True)
     descricao = models.TextField('Descrição', blank=True, null=True)
     valor = models.DecimalField(default=0, max_digits=8, decimal_places=2,
                                 help_text='Em reais (R$)')
@@ -69,6 +70,10 @@ class Profile(models.Model):
     bitbucket = models.URLField(blank=True, null=True)
     cv = models.TextField(blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'Perfil'
+        verbose_name_plural = 'Perfis'
+
     def get_absolute_url(self):
         return reverse('profile_detail', kwargs={'pk': self.pk})
 
@@ -85,6 +90,10 @@ class Inscricao(models.Model):
     data_inscricao = models.DateTimeField(auto_now_add=True)
     codigo = models.CharField(max_length=12)
 
+    class Meta:
+        verbose_name = 'Inscrição'
+        verbose_name_plural = 'Inscrições'
+
     def __unicode__(self):
         return u'Inscrição %05d' % self.id
 
@@ -92,8 +101,9 @@ class Inscricao(models.Model):
 class Palestra(models.Model):
     evento = models.ForeignKey(Evento)
     palestrantes = models.ManyToManyField(Profile)
-    titulo = models.CharField('Título', max_length=100)
+    titulo = models.CharField('Título', max_length=100)    
     slug = models.SlugField(max_length=100)
+    horario = models.DateTimeField('Horário', blank=True, null=True)
     descricao = models.TextField('Descrição', blank=True, null=True)
 
     def get_absolute_url(self):

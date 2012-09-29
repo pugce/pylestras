@@ -1,0 +1,7 @@
+<div class='postagem'>
+    <header>
+        <h2><a href="{{ postagem.get_absolute_url }}">{{ postagem.title }}</a></h2>
+        <div>{{ postagem.autor }}</div>
+    </header>
+    {{ postagem.html|safe }}
+</div>

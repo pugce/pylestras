@@ -58,17 +58,6 @@
             </ul>
         </div><br>
         <div class="fb-like" data-href="http://pylestras.org" data-send="false" data-width="355" data-show-faces="false"></div><br>
-        {% if realizacao %}
-            <h5>Realização</h5>
-            <hr class="lessspace"/>
-            <ul class='realizacao unstyled'>
-                {% for realizador in realizacao %}
-                    <li>
-                        <a href="{{ realizador.url }}"><img src="{{ MEDIA_URL }}{{ realizador.banner }}" alt="{{ apoiador }}"/></a>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}<br>
         <div class="patrocinio">
             <h5>Patrocínio</h5>
             <hr class="lessspace"/>
@@ -97,6 +86,18 @@
                     </li>
                 {% endfor %}
             </ul>
+            <br>
+            {% if realizacao %}
+                <h5>Realização</h5>
+                <hr class="lessspace"/>
+                <ul class='realizacao unstyled'>
+                    {% for realizador in realizacao %}
+                        <li>
+                            <a href="{{ realizador.url }}"><img src="{{ MEDIA_URL }}{{ realizador.banner }}" alt="{{ apoiador }}"/></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </div>
     {% include 'eventos/patrocine.html' %}

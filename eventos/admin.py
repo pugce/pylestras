@@ -35,9 +35,10 @@ class PatrocinioAdmin(admin.ModelAdmin):
 
 
 class PalestraAdmin(admin.ModelAdmin):
-    list_display = ('titulo',)
+    list_display = ('evento', 'titulo')
     prepopulated_fields = {'slug': ('titulo',)}
     search_fields = ['titulo']
+    order_by = ['evento', 'horario']
 
 
 admin.site.register(Evento, EventoAdmin)

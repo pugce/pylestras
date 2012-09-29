@@ -5,8 +5,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'', include('eventos.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^blog/', include('blog.urls')),
+    url(r'', include('eventos.urls')),
 )
 
 if settings.DEBUG:
