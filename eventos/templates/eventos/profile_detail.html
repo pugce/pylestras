@@ -5,12 +5,11 @@
 - {{ profile.nome }}
 {% endblock %}
 
-{% block content %}
-<div class="offset1 span10">
-    <div class="well">
+{% block event_desc %}
+    <div class="profile">
         <h2>{{ profile.nome }}</h2>
         <hr class="lessspace"/>
-        <a href="{{ profile.site }}"><img src="{% gravatar_for_email profile.email %}" alt="{{ profile.nome }}" /></a>
+        <a href="{{ profile.site }}"><img class="img-polaroid" src="{% gravatar_for_email profile.email %}" alt="{{ profile.nome }}" /></a>
         <ul class="unstyled">
             {% if profile.cv %}
                 <li><strong>Mini-currículo:</strong> {{ profile.cv }}</li>
@@ -45,5 +44,4 @@
 
         {% endif %}
     </div>
-</div>
 {% endblock %}
