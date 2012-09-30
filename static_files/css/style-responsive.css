@@ -1,0 +1,34 @@
+@media (min-width: 768px) and (max-width: 979px) {
+    .logo-pylestras {
+        background: transparent url("../img/pylestras-logo-vazia-166-141.png") center no-repeat;
+        height: 141px;
+    }
+    .versao {
+        width: 57px;
+        font-size: 27px;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .logo-pylestras {
+        margin-bottom: 20px;
+    }
+    .versao {
+        width: 76px;
+        font-size: 37px;
+        margin-top: 0;
+        position: absolute;
+        top: 52px;
+    }
+}
+@media (min-width: 1200px) {
+    .logo-pylestras {
+        background: transparent url("../img/pylestras-logo-vazia.png") center no-repeat;
+        height: 230px;
+    }
+    .versao {
+        width: 93px;
+        font-size: 3em;
+        margin-top: 53px;
+    }
+}
