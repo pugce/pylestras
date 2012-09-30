@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap.min.css" %}" />
         <link rel="stylesheet" href="{% static "css/style.css" %}" />
         <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap-responsive.min.css" %}" />
-
+        <link rel="stylesheet" href="{% static "css/style-responsive.css" %}" />
         {% block style %}{% endblock %}        
         {% block script %}{% endblock %}
         <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
             <div class="content span11 offset1">
                 <div class="row">
                     <a class="span3 logo-pylestras" href="{% url evento_index %}">
-                        <span class="versao">V</span>
+                        <span class="versao">{{ ultima_versao }}</span>
                     </a>
                     <div class="span6">
                         {% block event_desc %}{% endblock %}
