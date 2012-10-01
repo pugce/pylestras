@@ -42,10 +42,3 @@ class ProfileDetailView(DetailView):
         profile = self.object
         context['palestras'] = profile.palestra_set.all()
         return context
-
-
-def view_lastest_event(request):
-    try:
-        return redirect(Evento.publicados.latest())
-    except:
-        raise Http404()
