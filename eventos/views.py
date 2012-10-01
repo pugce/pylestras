@@ -1,5 +1,6 @@
 from django.views.generic import DetailView
 from django.http import Http404
+from django.shortcuts import redirect
 
 from eventos.models import Evento, Palestra, Profile
 from eventos.models import PA_FINANCEIRO, PA_REALIZACAO
@@ -41,3 +42,10 @@ class ProfileDetailView(DetailView):
         profile = self.object
         context['palestras'] = profile.palestra_set.all()
         return context
+
+
+def view_lastest_event(request):
+    try:
+        return redirect(Evento.publicados.latest())
+    except:
+        raise Http404()
