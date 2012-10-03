@@ -1,0 +1,86 @@
+[
+    {
+        "pk": 1, 
+        "model": "eventos.evento", 
+        "fields": {
+            "data_limite_inscricao": null, 
+            "valor": "0", 
+            "slug": "v-pylestras", 
+            "limite_inscricoes": null, 
+            "patrocinadores": [
+                2, 
+                3
+            ], 
+            "titulo": "V Pylestras", 
+            "logo": "", 
+            "publicado": true, 
+            "local": "Vila das Artes - <a href=\"http://goo.gl/maps/YLVAk\">Rua 24 de Maio, 1221, Centro | Fortaleza, Cear\u00e1</a>", 
+            "data_realizacao": "2012-10-06T11:00:00Z", 
+            "descricao": "O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o V PyLestras.\r\n\r\n\r\n<p><a href=\"http://bit.ly/vpylestrasviasite\" class=\"btn btn-success btn-large\"><i class=\"icon-white icon-thumbs-up\"></i> Inscreva-se</a></p>"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "eventos.evento", 
+        "fields": {
+            "data_limite_inscricao": null, 
+            "valor": "0", 
+            "slug": "iv-pylestras", 
+            "limite_inscricoes": null, 
+            "patrocinadores": [
+                3, 
+                4, 
+                5, 
+                6
+            ], 
+            "titulo": "IV Pylestras", 
+            "logo": "", 
+            "publicado": true, 
+            "local": " UFC - Campus do Pici, audit\u00f3rio do bloco 910", 
+            "data_realizacao": "2011-04-30T11:30:00Z", 
+            "descricao": " O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o IV PyLestras, evento de palestras com foco em python."
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "eventos.evento", 
+        "fields": {
+            "data_limite_inscricao": null, 
+            "valor": "0", 
+            "slug": "iii-pylestras", 
+            "limite_inscricoes": null, 
+            "patrocinadores": [
+                3, 
+                7
+            ], 
+            "titulo": "III Pylestras", 
+            "logo": "", 
+            "publicado": false,
+            "local": "Faculdade Farias Brito, sala 302", 
+            "data_realizacao": "2011-03-26T11:00:00Z", 
+            "descricao": "O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o terceiro PyLestras, evento de palestras com foco em python."
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "eventos.evento", 
+        "fields": {
+            "data_limite_inscricao": null, 
+            "valor": "0", 
+            "slug": "ii-pylestras", 
+            "limite_inscricoes": null, 
+            "patrocinadores": [
+                3, 
+                8, 
+                9, 
+                10
+            ], 
+            "titulo": "II Pylestras", 
+            "logo": "", 
+            "publicado": true, 
+            "local": "Faculdade 7 de setembro, sala 42", 
+            "data_realizacao": "2011-02-26T11:00:00Z", 
+            "descricao": "O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o segundo PyLestras, evento de palestras com foco em python."
+        }
+    }
+]
