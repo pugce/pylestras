@@ -1,0 +1,146 @@
+[
+    {
+        "pk": 2, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 3, 
+            "nome": "Vila das artes", 
+            "url": "http://viladasartes.fortaleza.ce.gov.br/", 
+            "contato": " Abraao Alcantara", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/logo_vila.png", 
+            "email": "sephiohff8@gmail.com", 
+            "descricao": "Espa\u00e7o para o V Pylestras"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 4, 
+            "nome": "PUG-CE", 
+            "url": "http://groups.google.com/group/pug-ce/", 
+            "contato": "PUG-CE", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/logo_pugce.png", 
+            "email": "pugce.org@gmail.com", 
+            "descricao": "Realizador oficial do Pylestras"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 0, 
+            "nome": "E-DEA", 
+            "url": "http://www.edeajr.ufc.br/site/", 
+            "contato": "E-DEA", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/e-deajr_logo.jpeg", 
+            "email": "", 
+            "descricao": ""
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 5, 
+            "nome": "Welcome to the django", 
+            "url": "http://welcometothedjango.com.br/", 
+            "contato": "Henrique Basto", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/welcometothedjango.png", 
+            "email": "", 
+            "descricao": ""
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 3, 
+            "nome": "UFC", 
+            "url": "http://www.ufc.br/portal/", 
+            "contato": "UFC", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/logo_ufc.png", 
+            "email": "", 
+            "descricao": ""
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 3, 
+            "nome": "Faculdade Farias Brito", 
+            "url": "", 
+            "contato": "FFB", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/logo_ffb.jpeg", 
+            "email": "", 
+            "descricao": "Ofereceu o espa\u00e7o para o III Pylestras"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 3, 
+            "nome": "Faculdade 7 de Setembro", 
+            "url": "http://www.fa7.edu.br/", 
+            "contato": "Marum", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/logo_fa7.jpeg", 
+            "email": "", 
+            "descricao": "Ofereceu o espa\u00e7o para o II Pylestras"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 0, 
+            "nome": "JobDone", 
+            "url": "http://jobdone.com.br/", 
+            "contato": "Regis Mesquita", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/jobdone-logo.png", 
+            "email": "", 
+            "descricao": "Coffee Break no II Pylestras"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "eventos.patrocinio", 
+        "fields": {
+            "tipo": 5, 
+            "nome": "Triveos", 
+            "url": "http://www.triveos.com.br/", 
+            "contato": "Oswaldo Santana", 
+            "texto": "", 
+            "telefone": "", 
+            "valor": "0", 
+            "banner": "banners/triveos.png", 
+            "email": "", 
+            "descricao": "Deu livro no II Pylestras"
+        }
+    }
+]
