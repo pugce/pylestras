@@ -28,3 +28,7 @@ class EventoTestCase(TestCase):
     def test_se_evento_foi_publicado(self):
         self.assertTrue(self.evento_1.publicado)
         self.assertFalse(self.evento_3.publicado)
+
+    def test_manager_publicados(self):
+        id_eventos_publicados = [x.pk for x in Evento.publicados.all()]
+        self.assertSequenceEqual(id_eventos_publicados, [1, 2, 4])

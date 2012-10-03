@@ -1,0 +1,1 @@
+from eventos.tests.models import EventoTestCase
