@@ -22,11 +22,11 @@ update:
 static:
 	@heroku run  python manage.py collectstatic
 
-remove_syncdb:
+remote_syncdb:
 	@heroku run python manage.py syncdb --noinput
 	@heroku run python manage.py migrate
 
-deploy: update remove_syncdb static
+deploy: update remote_syncdb static
 
 loaddemo: syncdb
 	$(VIRTUAL_ENV)/bin/python manage.py loaddata demo/demo_data.json
