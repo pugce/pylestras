@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load gravatar %}
+{% load static from staticfiles %}
+
+{% block meta %}
+    <meta property="og:title" content="{{ evento.titulo }}"/>
+    <meta property="og:image" content="{% static "img/logo_pugce.png" %}"/>
+    <meta property="og:site_name" content="Pylestras - Python User Groups Ceará"/>
+    <meta property="og:description" content="{{ evento.descricao|striptags }}"/>
+{% endblock %}
+{% block title %}
+    - {{ evento.titulo }}
+{% endblock %}
+
+{% block event_desc %}
+    <h2>{{ evento.titulo }}</h2>
+    <p>{{ evento.descricao|safe }}</p>
+    <p><strong>Local:</strong> {{ evento.local|safe }}</p>
+    <p><strong>Data Hora:</strong> {{ evento.data_realizacao|date:"d/m/Y H:i" }}</p>
+    <p><strong>Valor:</strong>
+        {% if evento.valor %}
+            R$ {{ evento.valor|floatformat:2 }}
+        {% else %}
+            <span class="label label-success">Gratuito</span>
+        {% endif %}
+    </p>
+{% endblock %}
+
+{% block content %}
+    <div class="span7">
+        {% if palestras %}
+            <ul class='palestras unstyled'>
+                {% for palestra in palestras %}
+                    <li class='palestra well'>
+                        <h4><a href="{{ palestra.get_absolute_url }}">{{ palestra.titulo }}</a></h4>
+                        <hr class="lessspace"/>
+                        <p>{{ palestra.descricao|safe }}</p>
+                        <ul class='palestrantes unstyled'>
+                            {% for palestrante in palestra.palestrantes.all %}
+                                <li class='palestrante'>
+                                    <a href="{{ palestrante.get_absolute_url }}"><img class="img-polaroid" src="{% gravatar_for_email palestrante.email %}" alt="{{ palestrante.nome }}" /></a>
+                                    <a style="margin-top: 50px;" href="{{ palestrante.get_absolute_url }}">{{ palestrante.nome }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <div id="disqus_thread"></div>
+    </div>
+    <div class="span3 pagination-centered" style="overflow: hidden;">
+        <div class="btn-group">
+            <button style="width: 100%;" class="btn dropdown-toggle" data-toggle="dropdown">Todas as edições <span class="caret"></span></button>
+            <ul style="width: 100%;" class="dropdown-menu">
+                {% for evento in eventos %}
+                    <li><a tabindex="-1" href="{{ evento.get_absolute_url }}">{{ evento.titulo }}</a></li>
+                {% endfor %}
+            </ul>
+        </div><br>
+        <div class="fb-like" data-href="http://pylestras.org" data-send="false" data-width="355" data-show-faces="false"></div><br>
+        <div class="patrocinio">
+            <h5>Patrocínio</h5>
+            <hr class="lessspace"/>
+            <ul class='patrocinio unstyled'>
+                {% for patrocinador in patrocinio %}
+                    <li>
+                        <a href="{{ patrocinador.url }}"><img src="{{ MEDIA_URL }}{{ patrocinador.banner }}" alt="{{ apoiador }}"/></a>
+                    </li>
+                {% empty %}
+                    <li>
+                        <a href="#patrocine" role="button"  data-toggle="modal"><img src="http://www.placehold.it/250x120" alt="Patrocine"/></a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <br>
+            <h5>Apoio</h5>
+            <hr class="lessspace"/>
+            <ul class='apoio unstyled'>
+                {% for apoiador in apoio %}
+                    <li>
+                        <a href="{{ apoiador.url }}"><img src="{{ MEDIA_URL }}{{ apoiador.banner }}" alt="{{ apoiador }}"/></a>
+                    </li>
+                {% empty %}
+                    <li>
+                        <a href="#patrocine" role="button"  data-toggle="modal"><img src="http://www.placehold.it/250x120" alt="Patrocine"/></a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <br>
+            {% if realizacao %}
+                <h5>Realização</h5>
+                <hr class="lessspace"/>
+                <ul class='realizacao unstyled'>
+                    {% for realizador in realizacao %}
+                        <li>
+                            <a href="{{ realizador.url }}"><img src="{{ MEDIA_URL }}{{ realizador.banner }}" alt="{{ apoiador }}"/></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+    {% include 'eventos/patrocine.html' %}
+    {% block extra_body %}
+        <!-- DISQUS -->
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'pylestras'; // required: replace example with your forum shortname
+            var disqus_identifier = '{{ evento.get_absolute_url }}';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {% endblock %}
+{% endblock %}

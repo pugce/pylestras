@@ -1,0 +1,68 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block meta %}
+    {% endblock %}
+    <title>PUG-CE{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Numans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap.min.css" %}" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link rel="stylesheet" href="{% static "bootstarp/css/bootstrap-responsive.min.css" %}" />
+    <link rel="stylesheet" href="{% static "css/style-responsive.css" %}" />
+    {% block style %}{% endblock %}
+    {% block script %}{% endblock %}
+    <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    {% include "includes/analytics.html" %}
+</head>
+<body>
+<a href="https://github.com/pugce/pylestras"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+<div class="container">
+    <div class="row">
+        <div class="content span11 offset1">
+            <div class="row">
+                <a class="span3 logo-pylestras" href="{% url evento_index %}">
+                    <span class="versao">{{ ultima_versao }}</span>
+                </a>
+                <div class="span6">
+                    {% block event_desc %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="content span11 offset1" style="margin-top: 20px;">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+{% if debug %}
+    <script src="{% static "js/jquery-1.8.1.min.js" %}"></script>
+{% else %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+{% endif %}
+
+<script src="{% static "bootstarp/js/bootstrap.min.js" %}"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+{% block extra_body %}
+{% endblock %}
+
+</body>
+</html>

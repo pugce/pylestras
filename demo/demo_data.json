@@ -1,0 +1,627 @@
+[
+    {
+        "pk": 1,
+        "model": "eventos.evento",
+        "fields": {
+            "data_limite_inscricao": null,
+            "slug": "v-pylestras",
+            "limite_inscricoes": null,
+            "patrocinadores": [
+                2,
+                3
+            ],
+            "valor": "0.00",
+            "titulo": "V Pylestras",
+            "publicado": true,
+            "local": "Vila das Artes - <a href=\"http://goo.gl/maps/YLVAk\">Rua 24 de Maio, 1221, Centro | Fortaleza, Cear\u00e1</a>",
+            "data_realizacao": "2012-10-06T11:00:00Z",
+            "descricao": "O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o V PyLestras.\r\n<br />Envie sua proposta de palestra em: <a href=\"http://call4paperz.com/events/v-pylestras\">http://call4paperz.com/events/v-pylestras</a>"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "eventos.evento",
+        "fields": {
+            "data_limite_inscricao": null,
+            "slug": "iv-pylestras",
+            "limite_inscricoes": null,
+            "patrocinadores": [
+                3,
+                4,
+                5,
+                6
+            ],
+            "valor": "0.00",
+            "titulo": "IV Pylestras",
+            "publicado": true,
+            "local": " UFC - Campus do Pici, audit\u00f3rio do bloco 910",
+            "data_realizacao": "2011-04-30T11:30:00Z",
+            "descricao": " O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o IV PyLestras, evento de palestras com foco em python."
+        }
+    },
+    {
+        "pk": 3,
+        "model": "eventos.evento",
+        "fields": {
+            "data_limite_inscricao": null,
+            "slug": "iii-pylestras",
+            "limite_inscricoes": null,
+            "patrocinadores": [
+                3,
+                7
+            ],
+            "valor": "0.00",
+            "titulo": "III Pylestras",
+            "publicado": true,
+            "local": "Faculdade Farias Brito, sala 302",
+            "data_realizacao": "2011-03-26T11:00:00Z",
+            "descricao": "O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o terceiro PyLestras, evento de palestras com foco em python."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "eventos.evento",
+        "fields": {
+            "data_limite_inscricao": null,
+            "slug": "ii-pylestras",
+            "limite_inscricoes": null,
+            "patrocinadores": [
+                3,
+                8,
+                10,
+                9
+            ],
+            "valor": "0.00",
+            "titulo": "II Pylestras",
+            "publicado": true,
+            "local": "Faculdade 7 de setembro, sala 42",
+            "data_realizacao": "2011-02-26T11:00:00Z",
+            "descricao": "O grupo de usu\u00e1rios Python do Cear\u00e1(PugCE), em iniciativa de promover a linguagem de programa\u00e7\u00e3o Python no Cear\u00e1 promove o segundo PyLestras, evento de palestras com foco em python."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "PUG-CE",
+            "twitter": "",
+            "site": null,
+            "linkedin": "",
+            "cv": "",
+            "facebook": "",
+            "email": "pugce.org@gmail.com"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "Junior Ribeiro",
+            "twitter": "",
+            "site": "",
+            "linkedin": "",
+            "cv": "",
+            "facebook": "",
+            "email": "fjunior87@gmail.com"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "Robert Oliveira",
+            "twitter": "",
+            "site": "",
+            "linkedin": "",
+            "cv": "",
+            "facebook": "",
+            "email": "olivecoder@gmail.com"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "https://bitbucket.com/fabiocerqueira",
+            "github": "https://github.com/fabiocerqueira",
+            "nome": "F\u00e1bio Cerqueira",
+            "twitter": "fabiocerqueira",
+            "site": "http://cerqueira.me/",
+            "linkedin": "http://www.linkedin.com/pub/f%C3%A1bio-cerqueira/23/a22/982",
+            "cv": "Graduando em Ci\u00eancia da Computa\u00e7\u00e3o pela UECE, estudante de  Python desde 2008, trabalhou em projeto utilizando C, JavaScript, Ruby, PHP, Java e Python. Ministrou cursos de Python na UECE e no IFCE. Co-fundador da empresa j\u00fanior de computa\u00e7\u00e3o da UECE, a Acens. Coordenador do PUG-CE e palestrante em algumas edi\u00e7\u00f5es do Pylestras. Atualmente trabalha com desenvolvimento voltado para telecomunica\u00e7\u00f5es e sistemas web com Python e Django.",
+            "facebook": "http://facebook.com/cerqueirafabio",
+            "email": "cerqueirasfabio@gmail.com"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "Wairton de Abreu",
+            "twitter": "",
+            "site": "",
+            "linkedin": "",
+            "cv": "",
+            "facebook": "",
+            "email": "vvairton@gmail.com"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "https://github.com/cmilfont",
+            "nome": "Christiano Milfont",
+            "twitter": "cmilfont",
+            "site": "http://www.milfont.org/",
+            "linkedin": "",
+            "cv": "Empreendedor, programador, organizador das comunidades JavaCE, XPCE, Cearajs, GURUCE e dos eventos Mar\u00e9 de Agilidade Fortaleza, AgileBrazil2011 e BrazilJS",
+            "facebook": "",
+            "email": "cmilfont@gmail.com"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "https://github.com/henriquegogo",
+            "nome": "Henrique Gog\u00f3",
+            "twitter": "henriquegogo",
+            "site": "http://gogs.com.br/",
+            "linkedin": "",
+            "cv": "Henrique Gog\u00f3 j\u00e1 tentou trabalhar com m\u00fasica, j\u00e1 foi publicit\u00e1rio, e, apesar de cursar letras, descobriu que o que gosta de fazer \u00e9 programar. Come\u00e7ou com Perl em 2004, usou PHP por muito tempo, trabalha com Ruby desde 2009 e depois que se rendeu ao jQuery, quer fazer tudo em JavaScript. \u00c9 entusiasta de bancos NoSQL, especificamente CouchDB, JavaScript server-side e sempre confia em Python para quebrar um galho em scripts locais.",
+            "facebook": "",
+            "email": "henriquegogo@gmail.com"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "Silas Santiago",
+            "twitter": "santiagosilas",
+            "site": "",
+            "linkedin": "",
+            "cv": "Graduado em Ci\u00eancia da Computa\u00e7\u00e3o pela Universidade Estadual do Cear\u00e1 (2010), atualmente cursa o Mestrado Acad\u00eamico em Ci\u00eancia da Computa\u00e7\u00e3o da UECE (MACC). Estuda Python h\u00e1 2 anos tendo intensificado, nos \u00faltimos 6 meses, seus estudos da tecnologia para o contexto acad\u00eamico. Outras \u00e1reas de interesse: C#.Net,Linux,An\u00e1lise de Desempenho de Redes, Aprendizado de M\u00e1quina Matlab.",
+            "facebook": "",
+            "email": "santiagosilas@yahoo.com.br"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "Moacir Filho",
+            "twitter": "moacirbispo",
+            "site": "http://snakecode.blogspot.com.br/",
+            "linkedin": "",
+            "cv": "Cursei Eng. Mec\u00e2nica na UFC e Redes de Computadores na FIC. Estudo Python a aproximadamento 2 anos. Trabalho com Linux para servidores e desenvolvimento de Aplicativos em Python, PHP, Java para dispositivos mobile. \"Brinco\" com o computador desde: 1989.",
+            "facebook": "",
+            "email": "bispo@det.ufc.br"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "https://github.com/regismesquita",
+            "nome": "Regis Mesquita",
+            "twitter": "regismesquita",
+            "site": "http://regismesquita.com.br/",
+            "linkedin": "",
+            "cv": "",
+            "facebook": "",
+            "email": "regis@regismesquita.com.br"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "Filipe Fernandes",
+            "twitter": "",
+            "site": "http://acens.com.br/",
+            "linkedin": "",
+            "cv": "Graduado e mestrando em Ci\u00eancia da Computa\u00e7\u00e3o pela UECE, graduando em Tecnologia em Telem\u00e1tica pelo IFCE e s\u00f3cio-fundador da empresa Acens, estuda Python h\u00e1 3 anos tendo trabalho em projetos com SQLAlchemy e Elixir. Entre suas \u00e1reas de interesse destacam-se as linguagens de programa\u00e7\u00e3o C/C++, Sistemas Distribu\u00eddos, Computa\u00e7\u00e3o nas Nuvens e Linux.",
+            "facebook": "",
+            "email": "filipe.uece@gmail.com"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "https://bitbucket.org/italomaia",
+            "github": "https://github.com/italomaia",
+            "nome": "Italo Maia",
+            "twitter": "italomaia",
+            "site": "http://italomaia.com/",
+            "linkedin": "",
+            "cv": "Entusiasta python a 5 anos, moderador do grupo django-brasil, coordenador do PUG-CE, mestrando em intelig\u00eancia de neg\u00f3cios pela UECE, coordenador do laborat\u00f3rio de banco de dados e otimiza\u00e7\u00e3o da UECE, desenvolvedor web e desktop. Contribuidor em projetos opensource como PyNFE, ModelMommy e o pr\u00f3prio site do PUG-CE, promove ativamente o python no Cear\u00e1 atrav\u00e9s de palestras e participando na organiza\u00e7\u00e3o de eventos. Seus principais interesses s\u00e3o desenvolvimento web utilizando tecnologia python, banco de dados, web design, design e web standards.",
+            "facebook": "",
+            "email": "italo.maia@gmail.com"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "",
+            "nome": "Marcelo Melo",
+            "twitter": "marcelorange",
+            "site": "http://arduino-ce.blogspot.com.br/",
+            "linkedin": "",
+            "cv": "Entusiasta de tecnologia futurista, Tecn\u00f3logo em Redes de Computadores pela FIC, P\u00f3s-graduando em Redes Convergentes na UNIFOR, onde tamb\u00e9m \u00e9 pesquisador na \u00e1rea de Redes de Sensores. Atuante em projetos de circuitos eletr\u00f4nicos, hardware, desenvolvimento e treinamento. Atualmente \u00e9 Projetista de Sistemas Embarcados e moderador do grupo Arduino-ce. Seus principais interesses s\u00e3o: Dom\u00f3tica, Redes de sensores sem fio, Rob\u00f3tica, Sistemas Embarcados, Monitoramento e controle via web usando Python.",
+            "facebook": "",
+            "email": "marcelo.laranjeira.melo@gmail.com"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "eventos.profile",
+        "fields": {
+            "bitbucket": "",
+            "github": "https://github.com/macndesign",
+            "nome": "M\u00e1rio Chaves",
+            "twitter": "macndesign",
+            "site": "http://mariochaves.blogspot.com.br/",
+            "linkedin": "",
+            "cv": "Especialista em Design Digital (MBA) e entusiasta Python a 1.5 anos. Coordenador o PUG-CE, graduando em An\u00e1lise e Desenvolvimento de Sistemas, inserido no mercado de Design Gr\u00e1fico e desenvolvimento web desde 2003 passando por algumas empresas como NeoPrint Sites, Jam Solu\u00e7\u00f5es para web, MBrasil (MartModa), Cagece e atualmente na ND Engenharia & Software desenvolvendo design e apps web, empresa essa que incentivou e deu oportunidade para desenvolver com Python e Django em ambiente corporativo. Tamb\u00e9m faz pequenos projetos freelancer com foco em sites institucionais com Python, Django, jQuery, html(5), CSS(3) e Photoshop nas horas vagas.",
+            "facebook": "",
+            "email": "macndesign@gmail.com"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                1
+            ],
+            "evento": 1,
+            "slug": "testes-deploy-e-integracao-continua-com-python-e-django",
+            "descricao": "Nesta palestra eu proponho mostrar como tem sido o desenvolvimento no meu dia-a-dia de trabalho com Python e Django. Mostrarei as ferramentas como fabric, coverage, Jenkins, nosetests e como elas podem ajudar a manter um c\u00f3digo com mais qualidade. A apresenta\u00e7\u00e3o n\u00e3o ser\u00e1 no formato tutorial, ser\u00e1 uma troca de experi\u00eancia do ambiente de desenvolvimento que estou inserido.",
+            "titulo": "Testes, deploy e integra\u00e7\u00e3o continua com Python e Django "
+        }
+    },
+    {
+        "pk": 2,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                2
+            ],
+            "evento": 1,
+            "slug": "visao-geral-do-redis",
+            "descricao": "Nesta palestra ser\u00e1 apresentada uma vis\u00e3o geral sobre o Redis \"an open source, advanced key-value store\". Ser\u00e3o apresentados alguns comandos e estrutura de dados suportados pelo mesmo.",
+            "titulo": "Vis\u00e3o Geral do Redis"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                3
+            ],
+            "evento": 1,
+            "slug": "python-rtfm",
+            "descricao": "Read the freaking manual, aka RTFM! Uma s\u00e9rie de pequenas dicas sobre python! V\u00e1rias coisas sobre as quais voc\u00ea j\u00e1 deveria saber/conhecer se tivesse o costume de ler a documenta\u00e7\u00e3o =). Ex: decorators, recurs\u00e3o, pdb, pep8, pra qu\u00ea serve a type() e por a\u00ed vai... voltada para iniciantes (n\u00e3o t\u00e3o iniciantes) e intermedi\u00e1rios b\u00e1sicos. ",
+            "titulo": "Python RTFM"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                5
+            ],
+            "evento": 1,
+            "slug": "ura-atendimento-telefonico-automatizado",
+            "descricao": "Como funciona uma URA/IVR (Interactive Voice Response) e quais s\u00e3o as alternativas de desenvolvimento usando python, softswitches opensource e PasS.",
+            "titulo": "URA - Atendimento telef\u00f4nico automatizado"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                9
+            ],
+            "evento": 2,
+            "slug": "django-extjs",
+            "descricao": "<iframe src=\"http://www.slideshare.net/slideshow/embed_code/7846336\" width=\"510\" height=\"426\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>",
+            "titulo": "Django + ExtJS"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                8
+            ],
+            "evento": 2,
+            "slug": "computacao-cientifica-com-numpy-e-scipy",
+            "descricao": "<iframe src=\"http://www.slideshare.net/slideshow/embed_code/7797060\" width=\"510\" height=\"426\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>",
+            "titulo": "Computa\u00e7\u00e3o Cient\u00edfica com NumPy e SciPy"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                6,
+                7
+            ],
+            "evento": 2,
+            "slug": "sammyjs-nem-so-o-twitter-tem-ajax-com-urls-amigaveis",
+            "descricao": "<iframe src=\"http://www.slideshare.net/slideshow/embed_code/7073043\" width=\"510\" height=\"426\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>",
+            "titulo": "Sammy.js, nem s\u00f3 o Twitter tem ajax com urls amig\u00e1veis"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                3
+            ],
+            "evento": 3,
+            "slug": "pyoque",
+            "descricao": "<iframe src=\"http://www.slideshare.net/slideshow/embed_code/7768828\" width=\"510\" height=\"426\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>",
+            "titulo": "Pyoqu\u00ea?"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                10
+            ],
+            "evento": 3,
+            "slug": "n00b-behaving-bloody-git",
+            "descricao": "<p>Palestra explicando o que \u00e9 e como funciona o sistema de controle de vers\u00f5es Git e principalmente como ele pode melhorar a sua vida.</p>\r\n\r\n<iframe src=\"http://www.slideshare.net/slideshow/embed_code/7789140\" width=\"510\" height=\"426\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>",
+            "titulo": "That n00b is behaving like a bloody git"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                9
+            ],
+            "evento": 3,
+            "slug": "nao-desperdice-seu-tempo-use-django_extensions",
+            "descricao": "<p>Vantegem que o django_extensions (do google) traz para um projeto de Django minimizando perdas de tempo com tarefas rotineiras. 1) Melhor vis\u00e3o do banco de dados 2) Altera\u00e7\u00f5es em um banco de dados existente 3) Uma nova vis\u00e3o para as paginas de BUGs 4) Testes com shell python pre carregadas. dentre outros</p>\r\n\r\n<object id=\"__sse7420128\" width=\"510\" height=\"426\" style=\"display: none !important; \"> <param name=\"movie\" value=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=djangoapresentao-110328142314-phpapp02&amp;stripped_title=apresentao-de-django-extension&amp;userName=snaketi\"> <param name=\"allowFullScreen\" value=\"true\"> <param name=\"allowScriptAccess\" value=\"always\"> <embed name=\"__sse7420128\" src=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=djangoapresentao-110328142314-phpapp02&amp;stripped_title=apresentao-de-django-extension&amp;userName=snaketi\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"510\" height=\"426\"> </object>",
+            "titulo": "N\u00e3o desperdice seu tempo, use django_extensions"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                11
+            ],
+            "evento": 3,
+            "slug": "sqlalchemy-desenvolvendo-uma-aplicacao-com-python",
+            "descricao": "<iframe src=\"http://www.slideshare.net/slideshow/embed_code/7849809\" width=\"510\" height=\"426\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>",
+            "titulo": "SQLAlchemy - Desenvolvendo uma aplica\u00e7\u00e3o com Python"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                12
+            ],
+            "evento": 4,
+            "slug": "testes-com-framework-djangopython-e-data-factory",
+            "descricao": "<object id=\"__sse7072791\" width=\"510\" height=\"426\" style=\"display: none !important; \"> <param name=\"movie\" value=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=djangodatafactory-110226141319-phpapp02&amp;stripped_title=django-object-factory&amp;userName=italomaia\"> <param name=\"allowFullScreen\" value=\"true\"> <param name=\"allowScriptAccess\" value=\"always\"> <embed name=\"__sse7072791\" src=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=djangodatafactory-110226141319-phpapp02&amp;stripped_title=django-object-factory&amp;userName=italomaia\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"510\" height=\"426\"> </object>",
+            "titulo": "Testes com framework django/python e data factory"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                13
+            ],
+            "evento": 4,
+            "slug": "arduino-solucoes-para-um-mundo-moderno",
+            "descricao": "<object id=\"__sse7083615\" width=\"510\" height=\"426\" style=\"display: none !important; \"> <param name=\"movie\" value=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=arduino-ceapresentacao-110227194758-phpapp02&amp;stripped_title=arduino-solues-para-o-mundo-moderno&amp;userName=MarceloMelo2\"> <param name=\"allowFullScreen\" value=\"true\"> <param name=\"allowScriptAccess\" value=\"always\"> <embed name=\"__sse7083615\" src=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=arduino-ceapresentacao-110227194758-phpapp02&amp;stripped_title=arduino-solues-para-o-mundo-moderno&amp;userName=MarceloMelo2\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"510\" height=\"426\"> </object>",
+            "titulo": "Arduino: solu\u00e7\u00f5es para um mundo moderno"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "eventos.palestra",
+        "fields": {
+            "palestrantes": [
+                14
+            ],
+            "evento": 4,
+            "slug": "tecnicas-para-preparacao-e-desenvolvimento-de-sites-com-django",
+            "descricao": "<object id=\"__sse7079659\" width=\"510\" height=\"426\" style=\"display: none !important; \"> <param name=\"movie\" value=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=apresentacaotecnicasdjangosites-110227102513-phpapp02&amp;stripped_title=tcnicas-para-preparao-e-desenvolvimento-de-sites-em-django&amp;userName=macndesign\"> <param name=\"allowFullScreen\" value=\"true\"> <param name=\"allowScriptAccess\" value=\"always\"> <embed name=\"__sse7079659\" src=\"http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=apresentacaotecnicasdjangosites-110227102513-phpapp02&amp;stripped_title=tcnicas-para-preparao-e-desenvolvimento-de-sites-em-django&amp;userName=macndesign\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"510\" height=\"426\"> </object>",
+            "titulo": "T\u00e9cnicas para prepara\u00e7\u00e3o e desenvolvimento de sites com django"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "eventos.realizacao",
+        "fields": {
+            "profile": 4,
+            "evento": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 3,
+            "nome": "Vila das artes",
+            "url": "http://viladasartes.fortaleza.ce.gov.br/",
+            "contato": " Abraao Alcantara",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/logo_vila.png",
+            "email": "sephiohff8@gmail.com",
+            "descricao": "Espa\u00e7o para o V Pylestras"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 4,
+            "nome": "PUG-CE",
+            "url": "http://groups.google.com/group/pug-ce/",
+            "contato": "PUG-CE",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/logo_pugce.png",
+            "email": "pugce.org@gmail.com",
+            "descricao": "Realizador oficial do Pylestras"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 0,
+            "nome": "E-DEA",
+            "url": "http://www.edeajr.ufc.br/site/",
+            "contato": "E-DEA",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/e-deajr_logo.jpeg",
+            "email": "",
+            "descricao": ""
+        }
+    },
+    {
+        "pk": 5,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 5,
+            "nome": "Welcome to the django",
+            "url": "http://welcometothedjango.com.br/",
+            "contato": "Henrique Basto",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/welcometothedjango.png",
+            "email": "",
+            "descricao": ""
+        }
+    },
+    {
+        "pk": 6,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 3,
+            "nome": "UFC",
+            "url": "http://www.ufc.br/portal/",
+            "contato": "UFC",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/logo_ufc.png",
+            "email": "",
+            "descricao": ""
+        }
+    },
+    {
+        "pk": 7,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 3,
+            "nome": "Faculdade Farias Brito",
+            "url": "",
+            "contato": "FFB",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/logo_ffb.jpeg",
+            "email": "",
+            "descricao": "Ofereceu o espa\u00e7o para o III Pylestras"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 3,
+            "nome": "Faculdade 7 de Setembro",
+            "url": "http://www.fa7.edu.br/",
+            "contato": "Marum",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/logo_fa7.jpeg",
+            "email": "",
+            "descricao": "Ofereceu o espa\u00e7o para o II Pylestras"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 5,
+            "nome": "Triveos",
+            "url": "http://www.triveos.com.br/",
+            "contato": "Oswaldo Santana",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/triveos.png",
+            "email": "",
+            "descricao": "Deu livro no II Pylestras"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "eventos.patrocinio",
+        "fields": {
+            "tipo": 0,
+            "nome": "JobDone",
+            "url": "http://jobdone.com.br/",
+            "contato": "Regis Mesquita",
+            "texto": "",
+            "telefone": "",
+            "valor": "0.00",
+            "banner": "banners/jobdone-logo.png",
+            "email": "",
+            "descricao": "Coffee Break no II Pylestras"
+        }
+    }
+]

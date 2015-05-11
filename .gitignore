@@ -3,5 +3,10 @@
 *.DS_Store
 *.mo
 *.sqlite3
+*.sublime-*
 .idea
+.env
 local_settings.py
+static
+media
+venv
