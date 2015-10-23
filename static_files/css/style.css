@@ -1,17 +1,17 @@
 body {
     margin-top: 10px;
-    background-image: url("../img/wood-texture.png");
+    background-color: #EEE;
     font-family: 'Numans', sans-serif;
 }
 .well {
-    background: #feefdf url("../img/wood-texture-well.png");
+    background-color: #FFF;
     border: 1px solid #fbf6f1;
 }
 hr {
     margin: 20px 0;
     border: 0;
-    border-top: 1px solid #dfcfbf;
-    border-bottom: 1px solid #fbf6f1;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #fbfbfb;
 }
 h4 > a { font-family: 'Coda', cursive }
 .logo-pylestras:hover { text-decoration: none }
