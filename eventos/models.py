@@ -101,10 +101,13 @@ class Inscricao(models.Model):
 class Palestra(models.Model):
     evento = models.ForeignKey(Evento)
     palestrantes = models.ManyToManyField(Profile)
-    titulo = models.CharField('Título', max_length=100)    
+    titulo = models.CharField('Título', max_length=100)
     slug = models.SlugField(max_length=100)
     horario = models.DateTimeField('Horário', blank=True, null=True)
     descricao = models.TextField('Descrição', blank=True, null=True)
+
+    class Meta:
+        ordering = ['horario']
 
     def get_absolute_url(self):
         return reverse('palestra_detail', kwargs={'slug': self.slug})
