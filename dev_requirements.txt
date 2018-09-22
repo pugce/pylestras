@@ -1,5 +1,5 @@
 Django==2.1.1
-Pillow==2.4.0
+Pillow==5.2.0
 dj-database-url==0.2.1
 django-gravatar==0.1.0
 gunicorn==0.14.6
