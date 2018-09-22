@@ -3,7 +3,7 @@ Pillow==5.2.0
 dj-database-url==0.5.0
 django-storages==1.7.1
 django-gravatar==0.1.0
-boto==2.5.2
+boto==2.49.0
 gunicorn==19.8.1
 psycopg2==2.4.5
 South==1.0.2
